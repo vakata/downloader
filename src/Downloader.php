@@ -37,7 +37,7 @@ class Downloader
         ?callable $fetch = null,
         ?callable $item = null,
     ) {
-        $this->url = $this->normalizeUrl($url);
+        $this->url = $url;
         $this->item = $item;
         $this->fetch = $fetch ?? function (string $url) {
             $data = file_get_contents(html_entity_decode($url), false, stream_context_create([
