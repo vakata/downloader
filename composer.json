@@ -1,0 +1,31 @@
+{
+    "name": "vakata/downloader",
+    "description": "A PHP class for making a static copy (or indexing) a site",
+    "keywords": [
+        "vakata",
+        "downloader",
+        "crawler"
+    ],
+    "homepage": "https://github.com/vakata/downloader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vakata",
+            "email": "github@vakata.com",
+            "homepage": "http://www.vakata.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=8.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "vakata\\downloader\\": "src"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=PSR2 --extensions=php --ignore=*/vendor/* ./",
+        "phpstan": "phpstan analyze -l 8 ./src"
+    }
+}
