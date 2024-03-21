@@ -182,6 +182,7 @@ class Downloader
     protected function normalizeUrl(string $url, string $currentUrl = null) : string
     {
         $url = explode('#', $url)[0];
+        $url = html_entity_decode($url);
         $data = parse_url($this->url);
         if ($url === 'p+') {
             return $url;
