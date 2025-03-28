@@ -74,7 +74,7 @@ class Downloader
      * @param string|null $remotePrefix
      * @return array<string,bool>
      */
-    public function download(string $destination, string $remotePrefix = null): array
+    public function download(string $destination, ?string $remotePrefix = null): array
     {
         $relative = $remotePrefix === null;
         $destination = rtrim($destination, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
@@ -179,7 +179,7 @@ class Downloader
         }
     }
 
-    protected function normalizeUrl(string $url, string $currentUrl = null) : string
+    protected function normalizeUrl(string $url, ?string $currentUrl = null) : string
     {
         $url = explode('#', $url)[0];
         $url = html_entity_decode($url);
